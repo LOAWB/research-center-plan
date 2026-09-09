@@ -165,27 +165,20 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
 :focus-visible{outline:2px solid var(--accent); outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
 
-/* ---- tabs ---- */
 .tabwrap{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule-2); margin-bottom:.5rem}
 .tabs{display:flex; gap:0; overflow-x:auto; scrollbar-width:thin; -webkit-overflow-scrolling:touch; padding:0}
 .tabs::-webkit-scrollbar{height:3px}
 .tabs::-webkit-scrollbar-thumb{background:var(--rule-2)}
-.tab{
-  appearance:none; background:none; border:0; border-bottom:2px solid transparent;
+.tab{appearance:none; background:none; border:0; border-bottom:2px solid transparent;
   font-family:var(--f-ui); font-size:.78rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
   color:var(--ink-3); padding:.95rem .95rem .8rem; cursor:pointer; white-space:nowrap; flex:none;
-  transition:color .12s ease, border-color .12s ease;
-}
+  transition:color .12s ease, border-color .12s ease;}
 .tab:hover{color:var(--ink-2)}
 .tab[aria-selected="true"]{color:var(--accent); border-bottom-color:var(--accent)}
 .tab:focus-visible{outline:2px solid var(--accent); outline-offset:-2px}
 .panel > section:first-child{border-top:0; padding-top:1.6rem}
 .hint{font-family:var(--f-ui); font-size:.74rem; color:var(--ink-3); padding:.55rem 0 0; letter-spacing:.01em}
-@media print{
-  .tabwrap,.hint{display:none}
-  .panel[hidden]{display:block!important}
-  section{break-inside:avoid}
-}
+@media print{.tabwrap,.hint{display:none} .panel[hidden]{display:block!important} section{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -426,6 +419,7 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
       </div>
     </div>
     <p>"The whole portfolio, including the losers" is the line no competitor in this sweep is willing to write, and it is the one Research Center can actually stand behind because the Telegram archive already proves it.</p>
+    <div class="note" style="border-left-color:var(--accent)"><strong>Be precise about what is verifiable, because one half of it is unusually strong.</strong> The <em>trades</em> are fully open: every entry and exit sits in the channel, timestamped before the outcome, and Research Center's own terms confirm it is "the same channel history every subscriber can view and review themselves... not drawn from any separate or private record." Almost nobody in this category can say that. The <em>~30%/yr figure</em> is a weaker claim of a different kind: it is derived from that history, the terms disclose that sizing for earlier entries was reconstructed because it was not recorded at the time, and they concede a recalculation "could reasonably produce a result somewhat above or below." Marketing should lean hard on the first and handle the second carefully. Leading with the number trades a claim nobody can challenge for one that a motivated critic can.</div>
     <h3>Which playbook to copy</h3>
     <p>The category runs on two incompatible proof mechanisms. The Agora and Stansberry lineage sells through dramatic, largely unverifiable claims wrapped in fine-print disclaimers. The Motley Fool sells through a long-running, dated, published scorecard. <strong>Research Center must build on the second and stay away from the first</strong>, and the reason is structural rather than moral.</p>
     <p>A publishing house can put an anonymous "the editors of X Research" byline on a fear-led promo, and when it goes wrong it winds the brand down — as MarketWise did with Legacy Research in February 2024, citing reputational harm from former employees' misconduct. Louis has no such firewall. Every claim traces to one named person who intends to still be selling under that name in ten years. The asset he is building is the archive, and the archive is only worth something if nothing attached to it ever needs disowning.</p>
@@ -533,7 +527,7 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
       <span class="lbl">The four rules, non-negotiable</span>
       <p><strong>1. Never state or imply the reader's outcome.</strong> Louis showing his own trades is the product and is legitimate. Copy that lets a reader infer his results will be theirs is the precise act prosecuted in <em>FTC v. Warrior Trading</em>. Describe the access, never the outcome.</p>
       <p><strong>2. Telegram never appears.</strong> Meta prohibits investment ads suggesting interaction via direct messaging, and Telegram is the delivery mechanism. The archive can be shown on screen as evidence without ever being named as the channel you join.</p>
-      <p><strong>3. Every performance figure carries its date, its source and its caveat.</strong> The ~30%/yr is self-calculated and unaudited. That sentence travels with the number, always, at readable size.</p>
+      <p><strong>3. Separate the record from the number.</strong> The trades are <em>fully verifiable</em>: every entry and exit is in the channel, timestamped before the outcome, and per Research Center's own terms it is "the same channel history every subscriber can view and review themselves... not drawn from any separate or private record." Say that as loudly as you like. The <strong>~30%/yr figure is a different class of claim</strong>: it is derived from that history, and the terms state that sizing for earlier entries had to be reconstructed and that a recalculation "could reasonably produce a result somewhat above or below." Lead with the record. The number always travels with that caveat.</p>
       <p><strong>4. No manufactured urgency.</strong> The quarterly enrollment window is real and may be used. Nothing invented may.</p>
     </div>
 
@@ -563,8 +557,8 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
 
     <div class="swipe">
       <span class="src">ANGLE 4 &middot; THE MODEST NUMBER</span>
-      <q>I am not going to tell you I made 1,000% on anything.<br><br>The portfolio has compounded at roughly 30% a year since March 2021. I calculated that myself from the public record and it has not been independently audited, so treat it as my own figure rather than a verified one.<br><br>I would rather tell you that than round it up.</q>
-      <span class="why"><b>The number's believability is the asset.</b> Against a feed of triple-digit claims, a high-twenties compounding figure with its own disclaimer attached reads as the only honest thing on the page. The caveat is the creative, so it must be said aloud rather than buried in fine print. <b>Highest regulatory load of the six.</b> This is the one counsel should read first, and it should not run until they have.</span>
+      <q>I am not going to tell you I made 1,000% on anything.<br><br>Roughly 30% a year since March 2021. Here is exactly where that comes from: every trade is in the channel, posted before I knew the outcome, and you can read the whole thing yourself. There is no separate private record.<br><br>The one soft edge is the early positions. I was not writing down the size at the time, so I reconstructed it. Run the same history with different sizing assumptions and you would land somewhat above or below my number.<br><br>I would rather tell you that than round it up.</q>
+      <span class="why"><b>The number's believability is the asset, and naming its weak spot is what makes it believable.</b> Against a feed of triple-digit claims, a high-twenties figure that volunteers where it is soft reads as the only honest thing on the page. Note what this angle does <em>not</em> concede: the trades themselves are not in doubt and are open to inspection. Only the aggregate is reconstructed. The caveat is the creative, so it must be said aloud rather than buried in fine print. <b>Highest regulatory load of the six.</b> This is the one counsel should read first, and it should not run until they have.</span>
     </div>
 
     <div class="swipe">
@@ -743,7 +737,7 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
           <tr><td>Actual prices charged today</td><td>The quiz reveals budget bands, not prices. The whole model keys off blended ACV.</td></tr>
           <tr><td>Does a Meta ad account exist for the entity</td><td>Verification in the financial category is slow; if this has not started, it is the critical path.</td></tr>
           <tr><td>Will Louis appear on camera weekly</td><td>The entire organic engine and most of the paid creative assumes he will. If not, the plan needs restructuring around written and chart-based content.</td></tr>
-          <tr><td>Can the ~30% figure be reconstructed from the archive</td><td>It is the central claim. Someone independent should be able to walk the Telegram history and land near it.</td></tr>
+          <tr><td>Can the ~30% figure be reconstructed from the archive</td><td>The trades can be verified by anyone. The aggregate is the open question: the terms state early sizing was not recorded and had to be reconstructed, so a full independent reconstruction may not be possible for the earliest period. Worth establishing how far back sizing is explicit, because that date is the point from which the number becomes independently checkable.</td></tr>
           <tr><td>Legal review of the call script</td><td>The publisher's exclusion is the regulatory foundation of the business and the sales call is where it is most exposed.</td></tr>
           <tr><td>Budget authority and monthly ceiling</td><td>Spend, pricing and go-live are operator decisions. Nothing in this plan should be actioned as spend without an explicit sign-off.</td></tr>
         </tbody>
@@ -760,7 +754,6 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
   Conversion rates, costs per lead and the ramp table are planning assumptions, not forecasts. Nothing here is investment advice.
 </footer>
 </div>
-
 <script>
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('.tab'));
@@ -780,8 +773,7 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
     t.addEventListener('click',function(){show(t.dataset.target,false);});
     t.addEventListener('keydown',function(e){
       var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
-      if(!d) return;
-      e.preventDefault();
+      if(!d) return; e.preventDefault();
       show(tabs[(i+d+tabs.length)%tabs.length].dataset.target,true);
     });
   });
@@ -789,10 +781,8 @@ footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; fon
     var h=(location.hash||'').replace('#','');
     if(h&&document.getElementById('panel-'+h)) show(h,false);
   }
-  window.addEventListener('hashchange',fromHash);
-  fromHash();
+  window.addEventListener('hashchange',fromHash); fromHash();
 })();
 </script>
-
 </body>
 </html>
