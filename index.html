@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Research Center &mdash; Growth Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#EFEFEC; --surface:#FFFFFF; --surface-2:#E7E8E3;
+  --ink:#16181A; --ink-2:#4A5054; --ink-3:#767C7E;
+  --rule:#D6D8D4; --rule-2:#C2C5BF;
+  --accent:#1F5C4A; --accent-soft:#DDE8E2;
+  --flag:#A3421C; --flag-soft:#F2E2D8;
+  --shadow:0 1px 2px rgba(20,24,22,.06);
+  --maxw:75rem; --col:41rem;
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-ui:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#131513; --surface:#1B1E1C; --surface-2:#222624;
+    --ink:#E8EAE6; --ink-2:#AFB5B0; --ink-3:#868C88;
+    --rule:#2E322F; --rule-2:#3C413D;
+    --accent:#5FBF9C; --accent-soft:#1D2A26;
+    --flag:#D97C4F; --flag-soft:#2C211B;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131513; --surface:#1B1E1C; --surface-2:#222624;
+  --ink:#E8EAE6; --ink-2:#AFB5B0; --ink-3:#868C88;
+  --rule:#2E322F; --rule-2:#3C413D;
+  --accent:#5FBF9C; --accent-soft:#1D2A26;
+  --flag:#D97C4F; --flag-soft:#2C211B;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--f-display); font-size:17px; line-height:1.62;
+  font-weight:380;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 2rem 8rem}
+@media(max-width:700px){.wrap{padding:0 1.15rem 5rem}}
+
+/* ---- masthead ---- */
+.mast{border-bottom:2px solid var(--ink); padding:3.5rem 0 1.4rem; margin-bottom:2.6rem}
+.mast-row{display:flex; flex-wrap:wrap; gap:1rem 2rem; align-items:baseline; justify-content:space-between}
+.mast h1{
+  font-size:clamp(2.3rem,5.2vw,3.9rem); line-height:1.02; margin:0;
+  font-weight:500; letter-spacing:-.022em; text-wrap:balance; max-width:20ch;
+}
+.mast h1 em{font-style:italic; font-weight:400; color:var(--accent)}
+.mast-meta{font-family:var(--f-mono); font-size:.7rem; line-height:1.85; color:var(--ink-3); text-align:right; letter-spacing:.01em}
+@media(max-width:700px){.mast-meta{text-align:left}}
+.mast-meta b{color:var(--ink-2); font-weight:500}
+.standfirst{
+  font-size:1.16rem; line-height:1.58; color:var(--ink-2); max-width:var(--col);
+  margin:1.6rem 0 0;
+}
+
+/* ---- section scaffold ---- */
+section{
+  display:grid; grid-template-columns:7.5rem minmax(0,1fr); gap:0 2.5rem;
+  padding:3.2rem 0; border-top:1px solid var(--rule);
+}
+@media(max-width:860px){section{grid-template-columns:1fr; gap:0; padding:2.4rem 0}}
+.rail{position:sticky; top:1.5rem; align-self:start; font-family:var(--f-mono); font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); line-height:1.7}
+@media(max-width:860px){.rail{position:static; margin-bottom:1.1rem}}
+.rail .n{display:block; font-size:1.5rem; letter-spacing:0; color:var(--rule-2); font-weight:500; margin-bottom:.25rem; font-variant-numeric:tabular-nums}
+.body{min-width:0; max-width:var(--col)}
+.body.wide{max-width:none}
+h2{font-size:clamp(1.5rem,2.6vw,2.05rem); line-height:1.16; margin:0 0 1.1rem; font-weight:500; letter-spacing:-.016em; text-wrap:balance}
+h3{font-family:var(--f-ui); font-size:.82rem; font-weight:600; letter-spacing:.055em; text-transform:uppercase; color:var(--accent); margin:2.4rem 0 .85rem}
+h4{font-family:var(--f-ui); font-size:.95rem; font-weight:600; margin:1.6rem 0 .4rem; letter-spacing:-.005em}
+p{margin:0 0 1.05rem}
+a{color:var(--accent); text-underline-offset:2px; text-decoration-thickness:.5px}
+strong{font-weight:600}
+ul,ol{margin:0 0 1.15rem; padding-left:1.15rem}
+li{margin-bottom:.5rem; padding-left:.15rem}
+li::marker{color:var(--ink-3)}
+
+/* ---- provenance chip ---- */
+.chip{
+  display:inline-flex; align-items:center; gap:.4rem; font-family:var(--f-ui);
+  font-size:.66rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+  padding:.22rem .5rem; border-radius:2px; white-space:nowrap; vertical-align:.08em;
+}
+.chip.v{background:var(--accent-soft); color:var(--accent)}
+.chip.o{background:var(--surface-2); color:var(--ink-3)}
+.chip.f{background:var(--flag-soft); color:var(--flag)}
+.chip::before{content:""; width:5px; height:5px; border-radius:50%; background:currentColor; flex:none}
+
+/* ---- callouts ---- */
+.note{border-left:2px solid var(--rule-2); padding:.15rem 0 .15rem 1.15rem; margin:1.5rem 0; color:var(--ink-2); font-size:.97rem}
+.alarm{
+  background:var(--flag-soft); border-left:3px solid var(--flag);
+  padding:1.15rem 1.3rem; margin:1.7rem 0;
+}
+.alarm .lbl{font-family:var(--f-ui); font-size:.68rem; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--flag); display:block; margin-bottom:.45rem}
+.alarm p:last-child{margin-bottom:0}
+.alarm code{font-family:var(--f-mono); font-size:.85em; background:rgba(0,0,0,.05); padding:.05em .3em}
+:root[data-theme="dark"] .alarm code,
+:root:not([data-theme="light"]) .alarm code{background:rgba(255,255,255,.07)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .alarm code{background:rgba(0,0,0,.05)}}
+
+/* ---- tables ---- */
+.tw{overflow-x:auto; margin:1.5rem 0; border-top:1.5px solid var(--ink); border-bottom:1px solid var(--rule)}
+table{border-collapse:collapse; width:100%; font-family:var(--f-ui); font-size:.86rem; min-width:34rem}
+th{
+  text-align:left; font-weight:600; font-size:.68rem; letter-spacing:.055em; text-transform:uppercase;
+  color:var(--ink-3); padding:.7rem .8rem; border-bottom:1px solid var(--rule); white-space:nowrap;
+}
+td{padding:.62rem .8rem; border-bottom:1px solid var(--rule); vertical-align:top; color:var(--ink-2)}
+td:first-child{color:var(--ink); font-weight:500}
+tr:last-child td{border-bottom:none}
+.num{font-family:var(--f-mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+.hi td{background:var(--accent-soft)}
+.hi td:first-child{color:var(--accent); font-weight:600}
+caption{caption-side:bottom; text-align:left; font-family:var(--f-ui); font-size:.72rem; color:var(--ink-3); padding-top:.7rem; line-height:1.5}
+
+/* ---- tearsheet figures ---- */
+.figs{display:grid; grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr)); gap:0; margin:1.7rem 0}
+.fig{background:var(--surface); padding:1.05rem 1.1rem; box-shadow:0 0 0 .5px var(--rule)}
+.fig .k{font-family:var(--f-ui); font-size:.65rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:.4rem}
+.fig .v{font-family:var(--f-mono); font-size:1.5rem; font-weight:500; letter-spacing:-.03em; display:block; line-height:1.1; font-variant-numeric:tabular-nums}
+.fig .s{font-family:var(--f-ui); font-size:.74rem; color:var(--ink-3); display:block; margin-top:.3rem; line-height:1.4}
+
+/* ---- swipe blocks ---- */
+.swipe{border:1px solid var(--rule); background:var(--surface); padding:1.1rem 1.2rem; margin:.9rem 0}
+.swipe .src{font-family:var(--f-mono); font-size:.68rem; color:var(--ink-3); display:block; margin-bottom:.5rem; letter-spacing:.01em}
+.swipe q{font-style:italic; color:var(--ink); quotes:"\201C" "\201D"}
+.swipe .why{font-family:var(--f-ui); font-size:.8rem; color:var(--ink-2); margin-top:.65rem; display:block; line-height:1.5}
+.swipe .why b{color:var(--accent); font-weight:600}
+
+/* ---- funnel steps ---- */
+.steps{list-style:none; padding:0; margin:1.5rem 0; border-top:1px solid var(--rule)}
+.steps li{
+  display:grid; grid-template-columns:3.4rem 1fr auto; gap:0 1rem; align-items:baseline;
+  padding:.8rem 0; border-bottom:1px solid var(--rule); margin:0;
+}
+@media(max-width:640px){.steps li{grid-template-columns:2.6rem 1fr; gap:.15rem .8rem}.steps li .rate{grid-column:2}}
+.steps .st{font-family:var(--f-mono); font-size:.72rem; color:var(--ink-3); font-variant-numeric:tabular-nums}
+.steps .lb{font-family:var(--f-ui); font-size:.9rem; color:var(--ink)}
+.steps .lb small{display:block; color:var(--ink-3); font-size:.79rem; line-height:1.45; margin-top:.15rem}
+.steps .rate{font-family:var(--f-mono); font-size:.86rem; color:var(--accent); font-weight:500; font-variant-numeric:tabular-nums; white-space:nowrap}
+
+/* ---- two-col compare ---- */
+.vs{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border:1px solid var(--rule); margin:1.6rem 0}
+@media(max-width:640px){.vs{grid-template-columns:1fr}}
+.vs > div{background:var(--surface); padding:1.1rem 1.15rem}
+.vs h5{margin:0 0 .7rem; font-family:var(--f-ui); font-size:.7rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase}
+.vs .bad h5{color:var(--flag)}
+.vs .good h5{color:var(--accent)}
+.vs ul{margin:0; padding-left:1rem; font-size:.88rem; font-family:var(--f-ui); color:var(--ink-2)}
+.vs li{margin-bottom:.45rem}
+
+footer{border-top:2px solid var(--ink); margin-top:1rem; padding-top:1.5rem; font-family:var(--f-mono); font-size:.7rem; color:var(--ink-3); line-height:1.8}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+
+/* ---- tabs ---- */
+.tabwrap{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule-2); margin-bottom:.5rem}
+.tabs{display:flex; gap:0; overflow-x:auto; scrollbar-width:thin; -webkit-overflow-scrolling:touch; padding:0}
+.tabs::-webkit-scrollbar{height:3px}
+.tabs::-webkit-scrollbar-thumb{background:var(--rule-2)}
+.tab{
+  appearance:none; background:none; border:0; border-bottom:2px solid transparent;
+  font-family:var(--f-ui); font-size:.78rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--ink-3); padding:.95rem .95rem .8rem; cursor:pointer; white-space:nowrap; flex:none;
+  transition:color .12s ease, border-color .12s ease;
+}
+.tab:hover{color:var(--ink-2)}
+.tab[aria-selected="true"]{color:var(--accent); border-bottom-color:var(--accent)}
+.tab:focus-visible{outline:2px solid var(--accent); outline-offset:-2px}
+.panel > section:first-child{border-top:0; padding-top:1.6rem}
+.hint{font-family:var(--f-ui); font-size:.74rem; color:var(--ink-3); padding:.55rem 0 0; letter-spacing:.01em}
+@media print{
+  .tabwrap,.hint{display:none}
+  .panel[hidden]{display:block!important}
+  section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="mast">
+  <div class="mast-row">
+    <h1>Research Center:<br>the road to <em>$100k/month</em></h1>
+    <div class="mast-meta">
+      <b>PREPARED</b> 2026-09-09<br>
+      <b>DESK</b> Competitive intelligence<br>
+      <b>SUBJECT</b> researchcenter.group<br>
+      <b>PRINCIPAL</b> Louis Bachour<br>
+      <b>STATUS</b> Sweep #1 + ad sweep #2<br>
+      <b>REVISED</b> 2026-09-09
+    </div>
+  </div>
+  <p class="standfirst">A market teardown and a full acquisition plan, built from the public record: sixteen competitor price points read off five sellers' own checkouts, two passes over the live Meta ad libraries covering 1,912 ad records, and a first-hand technical audit of the funnel as it stands today. Built around a free-webinar front end, with the six cold-traffic angles specified in section 10.</p>
+</header>
+<div class="tabwrap">
+  <div class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" tabindex="0" data-target="overview">Overview</button>
+    <button class="tab" role="tab" id="tab-blocker" aria-controls="panel-blocker" aria-selected="false" tabindex="-1" data-target="blocker">The blocker</button>
+    <button class="tab" role="tab" id="tab-market" aria-controls="panel-market" aria-selected="false" tabindex="-1" data-target="market">Market</button>
+    <button class="tab" role="tab" id="tab-ads" aria-controls="panel-ads" aria-selected="false" tabindex="-1" data-target="ads">Ad intelligence</button>
+    <button class="tab" role="tab" id="tab-position" aria-controls="panel-position" aria-selected="false" tabindex="-1" data-target="position">Positioning &amp; offer</button>
+    <button class="tab" role="tab" id="tab-funnel" aria-controls="panel-funnel" aria-selected="false" tabindex="-1" data-target="funnel">Funnel</button>
+    <button class="tab" role="tab" id="tab-creative" aria-controls="panel-creative" aria-selected="false" tabindex="-1" data-target="creative">Creative</button>
+    <button class="tab" role="tab" id="tab-compliance" aria-controls="panel-compliance" aria-selected="false" tabindex="-1" data-target="compliance">Compliance</button>
+    <button class="tab" role="tab" id="tab-numbers" aria-controls="panel-numbers" aria-selected="false" tabindex="-1" data-target="numbers">Numbers &amp; roadmap</button>
+  </div>
+</div>
+<p class="hint">Nine sections. Use the tabs above, or the left and right arrow keys. Section numbers are preserved so cross-references between sections still resolve.</p>
+  <div class="panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview">
+<section>
+  <div class="rail"><span class="n">01</span>The read</div>
+  <div class="body">
+    <h2>The product is ready. The distribution does not exist yet.</h2>
+    <p>Research Center sells an annual membership into Louis Bachour's real portfolio — every entry, exit, position size and the reasoning behind it, with a private Telegram community and in-person member events. The trade history has been time-stamped in a public Telegram channel since <span class="num">20 March 2021</span>.</p>
+    <p>That is a genuinely strong asset, and the offer around it is already well built: a qualifying quiz that disqualifies the wrong buyer on risk appetite, net worth and budget, a VSL, testimonial video, and a disclaimer set that is more careful than most of the category.</p>
+    <p>What is missing is everything that turns an offer into a business. There is no audience, no tracking, no paid media, and no free front end — and in this category the free front end <em>is</em> the acquisition engine.</p>
+    <div class="figs">
+      <div class="fig"><span class="k">Instagram</span><span class="v">1,148</span><span class="s">@louis_bachour, verified</span></div>
+      <div class="fig"><span class="k">Newsletter list</span><span class="v">193</span><span class="s">Dormant since Aug 2024</span></div>
+      <div class="fig"><span class="k">Active ads</span><span class="v">0</span><span class="s">Meta Ad Library, US</span></div>
+      <div class="fig"><span class="k">Tracking pixels</span><span class="v">0</span><span class="s">Nothing fires on the site</span></div>
+    </div>
+    <p class="note">Every figure above was verified first-hand on 2026-09-09. The plan that follows is built to fix them in that order, because they gate each other: you cannot buy traffic you cannot measure, and you cannot measure conversions you have no pixel for.</p>
+  </div>
+</section>
+<section>
+  <div class="rail"><span class="n">04</span>Precedent</div>
+  <div class="body">
+    <h2>The target is already proven at this exact offer shape</h2>
+    <p>Macro Ops publishes both halves of the equation on its own site: <strong>350+ members</strong> in the Collective, and a list price of <strong>$3,495 a year</strong>.</p>
+    <div class="figs">
+      <div class="fig"><span class="k">Macro Ops members</span><span class="v">350+</span><span class="s">Stated on macro-ops.com</span></div>
+      <div class="fig"><span class="k">List price</span><span class="v">$3,495</span><span class="s">Per year</span></div>
+      <div class="fig"><span class="k">Implied run rate</span><span class="v">$102k</span><span class="s">Per month</span></div>
+    </div>
+    <p>That is the whole target, reached by a small research operation with a transparent model portfolio, real-time alerts, a Slack community and twice-yearly in-person gatherings — feature for feature, the same product Research Center sells. <strong>$100k a month is roughly 275 members.</strong> It is a recruitment problem, not a product problem.</p>
+    <h3>And the industry spends heavily to get there</h3>
+    <p>MarketWise, the listed parent of Stansberry Research and Chaikin Analytics, is the only public company in the category. FY2025: <span class="num">$271.2M</span> billings, <span class="num">$328.1M</span> net revenue, and <span class="num">$131.0M</span> of sales and marketing — <strong>40% of revenue, or 48% of billings</strong>, depending which denominator you use. It has run at 39–44% of revenue every year on record. Any budget proposed below sits under that benchmark on either measure.</p>
+    <p>The more useful disclosure is what they are doing with it. <strong>Paid subscribers fell from 506,000 to 374,000 in a year — down 26% — while reported ARPU rose from <span class="num">$394</span> to <span class="num">$670</span>.</strong> Management says the price increases were deliberate and that subscriber count has become "a less meaningful driver." The share of subscribers who have spent over $5,000 lifetime went from 25% to 30%.</p>
+    <p class="note">That is the whole industry moving toward the model Research Center already is: fewer, better-qualified, higher-paying members. The application gate that looks like a constraint is the direction the category's largest operator is spending years and a shrinking subscriber file to reach.</p>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-blocker" aria-labelledby="tab-blocker" hidden>
+<section>
+  <div class="rail"><span class="n">02</span>Blocker</div>
+  <div class="body">
+    <h2>Nothing on the site is being tracked</h2>
+    <p><span class="chip f">Verified · blocking</span></p>
+    <div class="alarm">
+      <span class="lbl">Day-one blocker</span>
+      <p>A headless-browser audit of <code>researchcenter.group</code> on 2026-09-09 found <strong>no analytics or advertising pixel of any kind</strong>. <code>fbq</code>, <code>gtag</code>, <code>dataLayer</code> and <code>ttq</code> are all <code>undefined</code>, and no request is made to <code>facebook.com/tr</code>, <code>connect.facebook.net</code>, Google Tag Manager, Google Analytics, TikTok, Bing or Clarity.</p>
+      <p>Consequences, in order of cost: Meta cannot optimise toward a conversion, so every campaign would run blind on link clicks. No retargeting audience exists or has ever been accumulating — the most profitable audience in a high-ticket funnel is simply absent. And there is no attribution, so spend cannot be judged.</p>
+    </div>
+    <p>The site runs on GoHighLevel (<span class="num">leadconnectorhq.com</span>) with Vidalytics hosting the VSL and three testimonial videos, behind Cloudflare. That is good news: GoHighLevel already carries forms, scheduling, email, SMS and pipeline, so the whole nurture and booking apparatus in this plan can be built where the site already lives, without new infrastructure.</p>
+    <h3>Fix before any spend</h3>
+    <ul>
+      <li><strong>Meta pixel plus Conversions API.</strong> Browser-only pixels lose a large share of iOS signal; a high-ticket funnel with few conversions cannot afford that loss. Server-side events from GoHighLevel with deduplication.</li>
+      <li><strong>Define the conversion events properly.</strong> <span class="num">Registered</span>, <span class="num">Attended</span>, <span class="num">CallBooked</span>, <span class="num">CallHeld</span>, <span class="num">Purchase</span> with value. Optimise campaigns toward registration at first — at 40 sales a month there is nowhere near enough volume to train delivery on purchases — then move to Attended or CallBooked once weekly volume supports it.</li>
+      <li><strong>Send offline conversions back.</strong> Closes happen on a call, so the sale never touches the website. Push closed-won back to Meta with the click identifier or Meta will never learn which leads were worth buying.</li>
+      <li><strong>GA4 and a call-booking source field</strong> so booked calls can be traced to campaign and creative.</li>
+    </ul>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-market" aria-labelledby="tab-market" hidden>
+<section>
+  <div class="rail"><span class="n">03</span>Market</div>
+  <div class="body wide">
+    <h2>What the category actually charges</h2>
+    <p style="max-width:var(--col)"><span class="chip v">All prices verified at source</span></p>
+    <p style="max-width:var(--col)">Every price below was read directly off the seller's own checkout or pricing page on 2026-09-09. This matters because Research Center's implied band — the quiz offers <span class="num">$2,000–$6,000</span> and <span class="num">$6,000+</span> — sits at or above the top of the directly comparable set.</p>
+    <div class="tw">
+      <table>
+        <caption>Sources: accounts.hedgeye.com/products · capexinsider.com/insider-checkout · macro-ops.com/sign-up · kedm.com/product/upgrade · fool.com/services/one · the published Stansberry Alliance prospectus at stansberryvip.com · researchcenter.group quiz. Read 2026-09-09. Hedgeye, Capitalist Exploits, Macro Ops, KEDM and Research Center were read directly off the seller's own checkout; the Motley Fool and Stansberry top tiers come from Fool's own service page and Stansberry's own prospectus respectively.</caption>
+        <thead><tr><th>Offer</th><th>Free / entry front end</th><th class="num">Core</th><th class="num">Top tier</th><th>Guarantee</th></tr></thead>
+        <tbody>
+          <tr><td>Hedgeye</td><td>Free daily email; $99 first year (list $599)</td><td class="num">$269–$1,500</td><td class="num">$10,000</td><td>90-day money back</td></tr>
+          <tr><td>Capitalist Exploits Insider</td><td>Free newsletter → $1 first month, then $35/mo</td><td class="num">$1,499 promo</td><td class="num">$2,499 list</td><td>30-day, no questions</td></tr>
+          <tr><td>Macro Ops Collective</td><td>Free research emails</td><td class="num">$3,495</td><td class="num">—</td><td>60-day money back</td></tr>
+          <tr><td>KEDM (Kupperman)</td><td>4-week free trial; Lite under $40/mo</td><td class="num">$4,000</td><td class="num">—</td><td>Free trial</td></tr>
+          <tr><td>The Motley Fool</td><td>Free articles + podcast</td><td class="num">$199–$499</td><td class="num">~$13,999</td><td>Credit only, not cash</td></tr>
+          <tr><td>Stansberry Research</td><td>Free daily e-letters</td><td class="num">$499</td><td class="num">$33,000</td><td>$1,000 cancel fee</td></tr>
+          <tr class="hi"><td>Research Center</td><td><strong>None</strong></td><td class="num">$2,000–$6,000</td><td class="num">$6,000+</td><td><strong>None</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="body" style="max-width:var(--col)">
+      <h3>Two structural gaps, visible in one table</h3>
+      <p><strong>No front end.</strong> Every competitor has a free product. MarketWise runs 22 free publications feeding 112 paid ones, and converts a 2.0M free file into 374,000 paying subscribers. Research Center asks a stranger to fill in a net-worth-qualified application on first contact.</p>
+      <p><strong>No guarantee.</strong> Hedgeye gives 90 days, Macro Ops 60, Capitalist Exploits 30 with no questions asked and cover on future payments too. At a $3,600–$7,500 price on an unaudited track record, the absence of a guarantee is a direct conversion tax.</p>
+      <h3>Two numbers that bracket the pricing decision</h3>
+      <p><strong>The ceiling is far higher than it first looks.</strong> Fool One sells at roughly <span class="num">$13,999</span> a year behind an application and a white-glove sales process, and the Stansberry Alliance sells at <span class="num">$33,000</span> one-time plus a <span class="num">$599</span> annual maintenance fee. Both are sold by a person on the phone, not a checkout page. There is nothing unusual about a four-figure price in this category, and a five-figure tier is normal at the top.</p>
+      <p><strong>But the closest single-product analog is cheap.</strong> Hedgeye's Portfolio Solutions — Keith McCullough's own personal ETF portfolio, updated weekly, which is the nearest thing anyone sells to what Research Center sells — is <span class="num">$1,499.95</span> a year. That is the number a prospective member may find while comparison shopping, and the gap to $3,600 has to be earned by something Portfolio Solutions does not have: the reasoning behind every trade, the community, the events, and a single operator's whole book rather than a long-only ETF sleeve.</p>
+    </div>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-ads" aria-labelledby="tab-ads" hidden>
+<section>
+  <div class="rail"><span class="n">05</span>Ad libraries</div>
+  <div class="body">
+    <h2>Every competitor ad points at a low-commitment front end</h2>
+    <p><span class="chip v">Live capture · Meta Ad Library · 2026-09-09</span></p>
+    <p>I pulled the active US ad libraries for every major advertiser in the space. Counts on the day: Simpler Trading ~460 · Zacks ~150 · Timothy Sykes ~140 · Oxford Club ~110 · Motley Fool ~89 · Chaikin ~71 · Stansberry ~21 · Hedgeye ~4. Capitalist Exploits, Bravos Research, Banyan Hill and Research Center itself were running <strong>none</strong>.</p>
+    <p>Across all of it, <strong>not one ad sent cold traffic to a full-price checkout or to a net-worth-qualified application.</strong> Every destination was a free email opt-in, a free video, a free report, or a <strong>$1 tripwire</strong>. That is the single most important structural finding in this report, and it is the opposite of what Research Center does today.</p>
+    <div class="note"><strong>Correction, from a second sweep run the same day.</strong> The first pass filed this as "every destination is free." A structured re-pull found one significant exception, and it is the largest single ad cluster in the whole study: <strong>63 Tim Sykes ads point at a paid checkout priced at $1</strong>. The conclusion holds and gets sharper. The front end is not necessarily free. It is always <em>low-commitment</em>, and it is never the real price.</div>
+
+    <h3>The hooks that are actually running</h3>
+
+    <div class="swipe">
+      <span class="src">HEDGEYE · started 2026-05-29</span>
+      <q>Called every U.S. crash since 2008. Delivered 6,800+ winning trade signals. Get Hedgeye's 10-ETF portfolio and daily market guidance — when to add, trim, or exit.</q>
+      <span class="why"><b>Track record as the headline.</b> The proof is the hook; the ask is free access. Closest structural match to what Louis can honestly claim.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">SIMPLER TRADING · started 2026-08-21</span>
+      <q>My win rate comes from the trades I refuse to take. For years I won about half my trades… Over my last 200 documented trades, I've won 74%. My stock picking didn't improve… I just quit making exceptions.</q>
+      <span class="why"><b>Process credibility, anti-hype.</b> Concedes a weakness, cites a countable sample, sells discipline rather than a jackpot. This is the archetype to build on — it is both the most persuasive to a $500k-net-worth buyer and the least likely to trip a platform review.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">STANSBERRY RESEARCH · started 2026-06-24</span>
+      <q>No one believed Whitney Tilson in 2008 when he warned the housing market was about to collapse… But now, Whitney has a NEW warning for all Americans.</q>
+      <span class="why"><b>The credentialed prophet.</b> Category-standard and highly effective, but it runs on a decades-long public record of named calls. Louis does not have that yet, and manufacturing it is exactly how publishers get into trouble.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">THE MOTLEY FOOL · started 2026-07-20</span>
+      <q>48-Year-Old CEO Puts $2.6B on 1 Stock — "Highest Conviction" Buy Signal Flashing</q>
+      <span class="why"><b>Curiosity teaser with one hard number.</b> Cheap clicks, low intent. Useful for list building at the very top of the funnel, poor for booking $4k calls.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">CHAIKIN ANALYTICS · started 2026-08-18</span>
+      <q>60-year Wall Street legend Marc Chaikin says these stocks are poised to overtake tech's current blue chips… He's giving away names, tickers and trade ideas free — watch now.</q>
+      <span class="why"><b>Named authority giving something away.</b> Note the mechanic, not the claim: a specific, valuable, free thing with a face attached to it.</span>
+    </div>
+
+    <h3>Sweep #2: what run-duration reveals</h3>
+    <p>The first pass read what was painted on the page. A second pass the same day read the Ad Library's underlying structured records instead, which exposes fields the first could not see: exact start and end dates, the number of live variants, and the true destination URL. <strong>1,912 ad records were scanned and 242 confirmed as belonging to the named advertiser.</strong></p>
+    <p>The important new field is <strong>how long an ad has been running</strong>. Nobody keeps paying for an ad that does not work, so duration is the closest thing to a public read on what is winning. The first sweep could not measure it.</p>
+    <div class="tw">
+      <table>
+        <caption>Active US ads confirmed to the named advertiser, Meta Ad Library, 2026-09-09. Page IDs recorded so future pulls can target each advertiser precisely instead of by keyword.</caption>
+        <thead><tr><th>Advertiser</th><th class="num">Confirmed active ads</th><th>Front end it buys traffic to</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td>Timothy Sykes</td><td class="num">110</td><td>Free daily email, and a <strong>$1 tripwire</strong></td></tr>
+          <tr><td>Chaikin Analytics</td><td class="num">42</td><td>Free VSL</td></tr>
+          <tr><td>The Motley Fool</td><td class="num">38</td><td>Free article funnel</td></tr>
+          <tr><td>Brownstone Research</td><td class="num">34</td><td>Free VSL</td></tr>
+          <tr><td>Motley Fool Money</td><td class="num">12</td><td>Credit-card comparison pages</td></tr>
+          <tr><td>Behind the Markets</td><td class="num">6</td><td>Free VSL</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>The single most proven ad in the category is a free daily email</h4>
+    <div class="swipe">
+      <span class="src">TIMOTHY SYKES &middot; running 399 DAYS and still active &middot; started 2025-08-06</span>
+      <q>Get daily access to the most successful minds in trading! Unlock this wealth of knowledge for free every day with Daily Doubler.</q>
+      <span class="why"><b>399 continuous days.</b> The longest run found among the 242 confirmed competitor ads, by a wide margin. Not a curiosity gap, not a prediction, not a countdown. A specific free thing that arrives every day. This is the most durable proven pattern in the category and it is well within what Research Center can offer honestly.</span>
+    </div>
+
+    <h4>The exception that sharpens the rule: a $1 front end</h4>
+    <div class="swipe">
+      <span class="src">TIMOTHY SYKES &middot; 63 active ads, the largest single cluster in the study</span>
+      <q>I'm Giving Away My Top Setup For Just $1 (Labor Day Sale)</q>
+      <span class="why"><b>A paid checkout at $1, with a 30-day money-back guarantee</b>, verified by loading the page. The mechanic is worth understanding: a $1 charge qualifies far harder than a free opt-in because it takes a card and a decision, while barely raising friction. Sykes has put more active ads behind this than behind his free opt-in. It is a live option for Research Center's front end and it was not on the table before this sweep.</span>
+    </div>
+
+    <h4>The Motley Fool is now advertising the exact posture this plan recommends</h4>
+    <div class="swipe">
+      <span class="src">THE MOTLEY FOOL &middot; 15 of its 38 active ads &middot; started 2026-08-27</span>
+      <q>Judge Us by the Scorecard<br>The biggest loser isn't the red position. It's the winner you sold too soon.</q>
+      <span class="why"><b>An invitation to audit, plus an admitted mistake, as the paid hook.</b> Section 06 argues for the published-scorecard posture over the fear-led VSL. The largest consumer brand in the category is now buying media against that argument, in a headline that dares the reader to check the record and a body line that concedes a loss. It is the strongest available evidence that this register survives a paid auction, and it is the register Louis's archive is uniquely built for.</span>
+    </div>
+
+    <h4>Four of the closest comparables do not buy Meta traffic at all</h4>
+    <p>Searched directly, active-only: <strong>Porter &amp; Co, Bravos Research, Game of Trades, Everything Money and Seeking Alpha's Alpha Picks are running zero Meta ads.</strong> Between them, 978 candidate records were scanned and not one belonged to the real advertiser.</p>
+    <p>That is a finding rather than a blank. The Meta auction in this category is contested by the Agora-lineage publishers and the two large consumer brands. <strong>The creator-led research shops whose offer shape most resembles Research Center's are not in it.</strong> Louis would be entering a lane his closest analogs have left empty, which cuts both ways: less competition for the impression, and no proof from a direct peer that the channel works for this exact offer. It is a reason to prove the funnel at small spend before committing budget, not a reason to avoid the channel.</p>
+    <div class="note"><strong>Not re-verified in sweep #2:</strong> Hedgeye, Stansberry, Zacks and Oxford Club returned no results in the second pull. Sweep #1 found all four advertising earlier the same day, and sweep #1 stands. The empty second result is a search artifact, not evidence they stopped.</div>
+
+    <p class="note">These are competitor ads recorded for angle and structure only. Nothing here should be copied; the point is the shape of the offer and the destination, both of which Research Center can build honestly from its own material.</p>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-position" aria-labelledby="tab-position" hidden>
+<section>
+  <div class="rail"><span class="n">06</span>Position</div>
+  <div class="body">
+    <h2>The wedge is the timestamp, not the return</h2>
+    <p>The category's competitors anchor on three things Louis cannot credibly claim: assets under management (Capitalist Exploits leads with "Copy a $360M Fund"), institutional pedigree (hedge fund manager, "60-year Wall Street legend"), or sheer signal volume (Hedgeye's 6,800+ trade signals).</p>
+    <p>He has something none of them lead with, and it happens to be the most defensible asset in a category with a credibility problem:</p>
+    <div class="note" style="border-left-color:var(--accent); font-size:1.06rem; color:var(--ink)">A single operator's own money, in one portfolio, with every position posted publicly and time-stamped before the outcome was known, continuously since March 2021 — and a return figure modest enough to be believed.</div>
+    <p><strong>The ~30% a year is a marketing asset precisely because it is not spectacular.</strong> A buyer with $500,000 has been pitched 1,000% option trades for years and has learned to discount them entirely. A compounding figure in the high twenties, presented with its own caveats attached, reads as real. It should be stated plainly and never inflated — inflating it would trade the one genuine advantage for the thing everyone else has.</p>
+    <div class="vs">
+      <div class="bad">
+        <h5>Retire this framing</h5>
+        <ul>
+          <li>"Millions of dollars generated" — unverifiable, and reads like every guru ad</li>
+          <li>"Join a team that's already winning" — no information in it</li>
+          <li>Any headline number without its timeframe attached</li>
+        </ul>
+      </div>
+      <div class="good">
+        <h5>Lead with this instead</h5>
+        <ul>
+          <li>Every position, time-stamped in public before the outcome — since March 2021</li>
+          <li>The whole portfolio, including the losers, not a highlight reel</li>
+          <li>One operator, his own capital, concentrated and disclosed</li>
+        </ul>
+      </div>
+    </div>
+    <p>"The whole portfolio, including the losers" is the line no competitor in this sweep is willing to write, and it is the one Research Center can actually stand behind because the Telegram archive already proves it.</p>
+    <h3>Which playbook to copy</h3>
+    <p>The category runs on two incompatible proof mechanisms. The Agora and Stansberry lineage sells through dramatic, largely unverifiable claims wrapped in fine-print disclaimers. The Motley Fool sells through a long-running, dated, published scorecard. <strong>Research Center must build on the second and stay away from the first</strong>, and the reason is structural rather than moral.</p>
+    <p>A publishing house can put an anonymous "the editors of X Research" byline on a fear-led promo, and when it goes wrong it winds the brand down — as MarketWise did with Legacy Research in February 2024, citing reputational harm from former employees' misconduct. Louis has no such firewall. Every claim traces to one named person who intends to still be selling under that name in ten years. The asset he is building is the archive, and the archive is only worth something if nothing attached to it ever needs disowning.</p>
+  </div>
+</section>
+<section>
+  <div class="rail"><span class="n">07</span>Offer</div>
+  <div class="body">
+    <h2>Pricing architecture</h2>
+    <p>Keep the application gate and the disqualifiers — they are correct, and they protect both the community and the publisher's exclusion. Change the ladder around them.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Tier</th><th class="num">Price / yr</th><th>Contents</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>The Letter</td><td class="num">Free</td><td>Weekly macro + portfolio commentary, one position teardown a month</td><td>The acquisition engine. Everything upstream points here.</td></tr>
+          <tr><td>Research Center</td><td class="num">$3,600</td><td>Live portfolio, every entry/exit with sizing and reasoning, Telegram, archive</td><td>The volume tier. ~80% of members.</td></tr>
+          <tr><td>Research Center Partner</td><td class="num">$7,500</td><td>Everything above, plus quarterly live sessions, member events, direct access</td><td>The margin tier. ~20% of members.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Blended ACV at an 80/20 mix is <strong>$4,380</strong>. At that number, <strong>274 members is $100,000 a month.</strong></p>
+    <h3>Three additions that pay for themselves</h3>
+    <ul>
+      <li><strong>A 30-day guarantee.</strong> The category standard is 30 to 90 days. On an unaudited track record at a four-figure price, this is the single highest-leverage conversion change available, and the refund exposure is bounded by the application gate already filtering out the wrong buyer.</li>
+      <li><strong>Payment plans at checkout.</strong> Commas, the processor already in place, carries nine BNPL providers and financing from $30 to $465,000, with the seller paid in full upfront. On a $7,500 tier this converts the price objection directly.</li>
+      <li><strong>Real enrollment windows.</strong> The quiz already says spots are limited each quarter. Macro Ops genuinely opens and closes enrollment, and closed periods build the list for the next open. Make the scarcity true, then use it.</li>
+      <li><strong>Credit-back on the upgrade.</strong> Stansberry's published prospectus credits 100% of a subscriber's prior spend against its top-tier price. Applied here: a member's paid $3,600 comes straight off the Partner tier. It costs nothing on a first-year upgrade, it makes the upgrade conversation trivially easy, and it is the one mechanic from the high-ticket playbook that transfers to a solo operator without any of the risk attached to the rest of it.</li>
+      <li><strong>Keep cancellation frictionless, and say so.</strong> The loudest public complaints in this category are not about stock picks — they are about billing. The most-criticised operator in the sweep gates its cancel button behind a video you cannot skip. Research Center already lets members cancel from the Commas receipt email with no account needed. That is a real trust advantage sitting unused; put it on the sales page.</li>
+    </ul>
+    <div class="note"><strong>One caution on the price.</strong> The $14k and $33k tiers in this category are justified by a value stack — you are buying twenty newsletters for the price of two. Research Center has one product, so the same argument is unavailable. The $3,600 and $7,500 have to be carried by depth of access: the full book rather than a sleeve, the reasoning rather than the signal, the room and the events rather than a PDF. If the sales page argues volume, it loses to a $499 competitor. If it argues access, it has no competitor.</div>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-funnel" aria-labelledby="tab-funnel" hidden>
+<section>
+  <div class="rail"><span class="n">08</span>Funnel</div>
+  <div class="body">
+    <h2>The webinar is the funnel</h2>
+    <p>Cold traffic goes to a free webinar registration, not to the application. The webinar does the teaching, the proving and the qualifying in one 70-minute sitting, and only people who sit through it are asked for anything.</p>
+    <p>This is the category's own proven shape, not an import: Macro Ops runs a free Trading &amp; Investing Masterclass into its cohort enrollment, Hedgeye runs a free 90-minute masterclass, Chaikin runs live "Urgent Briefing" sessions as its VSL, and Warrior Trading's entire front end is free webinar registration.</p>
+    <div class="alarm">
+      <span class="lbl">What the ad data does and does not support</span>
+      <p>The claims above describe how these competitors build their <em>funnels</em> on their own sites. Sweep #2 measured something narrower and harder: what they buy cold Meta traffic into. <strong>Zero of the 242 confirmed competitor ads drive to a webinar registration.</strong> The only CTAs in the entire set are "Learn more" and "See details." What is demonstrably proven in paid traffic in this category is the free email opt-in and the $1 tripwire, one of which has run for 399 days.</p>
+      <p>That does not make the webinar wrong. Nobody in the sample is testing it, so it is untested here rather than disproven, and the in-room checkout and booking that Commas provides are a genuine structural advantage the others do not have. But it does mean the funnel below rests on assumed rates with no direct paid-media precedent in this category. <strong>Prove it at low spend before scaling, and treat the $1 tripwire as the identified fallback</strong> if cost per registration or show rate comes in badly.</p>
+    </div>
+    <div class="note"><strong>The stack already does this.</strong> Commas — the processor Research Center is already on — runs webinars with checkout inside the room, nine BNPL providers at that checkout, and, for offers that close on a call, in-room calendar booking so an attendee never leaves the session. Nothing new needs buying to run this.</div>
+    <ol class="steps">
+      <li><span class="st">STEP 1</span><span class="lb">Cold ad to a webinar registration page<small>Name and email only. No net worth, no phone, no quiz. The ad sells a seat, not a membership.</small></span><span class="rate">35% register</span></li>
+      <li><span class="st">STEP 2</span><span class="lb">Reminder sequence<small>Email at confirmation, 24h, 1h and 10min; SMS at 1h and at start. GoHighLevel already runs both. This sequence is worth more than any creative change — show rate is where webinar funnels are won or lost.</small></span><span class="rate">—</span></li>
+      <li><span class="st">STEP 3</span><span class="lb">The webinar, ~70 minutes<small>Teach the method, prove it against the public archive, then make the offer. Live and hosted by Louis at first.</small></span><span class="rate">38% attend</span></li>
+      <li><span class="st">STEP 4a</span><span class="lb">Enroll in the room at Core<small>Commas checkout opens inside the session, BNPL included. Captures the decided buyer before the momentum dies.</small></span><span class="rate">1.3% of attendees</span></li>
+      <li><span class="st">STEP 4b</span><span class="lb">Book a call for Partner<small>In-room calendar. The existing application quiz runs as the booking form, so the qualification logic already built is preserved.</small></span><span class="rate">8% of attendees</span></li>
+      <li><span class="st">STEP 5</span><span class="lb">Call held<small>Attendees arrive having watched 70 minutes. Show rate and close rate both run materially higher than off a cold application.</small></span><span class="rate">65% held</span></li>
+      <li><span class="st">STEP 6</span><span class="lb">Closed<small>Louis on every call at first. Credit-back applies for anyone upgrading from Core.</small></span><span class="rate">28%</span></li>
+      <li><span class="st">STEP 7</span><span class="lb">Everyone else goes to the Letter<small>No-shows, non-buyers and replay-watchers roll onto the weekly Letter and get re-invited to a later session. Most members will come from this tail, not from their first webinar.</small></span><span class="rate">—</span></li>
+    </ol>
+    <p>End to end that is <strong>1.05% of registrations to members</strong>, or roughly <strong>one member per 95 registrations</strong>. Every rate above is a planning assumption to be replaced with measured data by month three.</p>
+
+    <h3>What the webinar actually is</h3>
+    <p>The temptation is a prediction webinar — the coming crash, the one stock. That is the Agora playbook and section 06 already ruled it out. Build the other kind: a <strong>method webinar with the archive as the evidence</strong>.</p>
+    <p>Working structure, roughly 70 minutes: how Louis decides what to own and how much of it; the three rules and what each one has cost him; then the proof pass — open the actual Telegram channel on screen and walk two or three real positions from the original timestamped message through to the exit, <em>including one that lost money</em>. Then the offer, then live Q&amp;A. The losing trade is not a concession, it is the most persuasive ten minutes in the session and the reason the FTC exposure in section 11 stays low: nobody walks out of that webinar believing returns are guaranteed.</p>
+    <h4>Live first, evergreen second</h4>
+    <p>Run it live and weekly for the first eight to twelve weeks. Live is where the deck gets fixed, where the objection library gets written from real Q&amp;A, and where show rates are highest. Only once the live version converts should it be recorded and run just-in-time — evergreen a webinar that has not yet proven itself and you scale a session that does not work.</p>
+    <p class="note">Two economics notes. The webinar compresses the sales cycle — an attendee has already had 70 minutes of Louis before the call, which is why the close rate here is set above the cold-application case. And it front-loads the work: one asset, iterated weekly, carries the entire funnel, which suits a solo operator far better than a large library of content that all has to keep performing.</p>
+  </div>
+</section>
+<section>
+  <div class="rail"><span class="n">09</span>Traffic</div>
+  <div class="body">
+    <h2>Where the 5,600 monthly leads come from</h2>
+    <h3>Paid — the volume, from month one</h3>
+    <p><strong>Meta is the primary channel.</strong> Advantage+ audiences with a broad-ish target and creative doing the qualifying: the ad copy itself should mention a portfolio, a net worth bracket, or a decade of investing so the wrong buyer self-selects out before the click. Optimise to the opt-in first, then to the application once volume supports it.</p>
+    <p><strong>YouTube in-stream and in-feed second, from month three.</strong> This is where the category's creator-led operators actually built their audiences, and Louis's material — long-form macro reasoning — is native to it.</p>
+    <p><strong>Newsletter sponsorships third.</strong> Direct placements in adjacent finance newsletters buy pre-qualified readers at a known price without any platform-policy risk at all. Test three placements in month four.</p>
+    <h3>Organic — the margin, compounding from month one</h3>
+    <p>The Substack has 193 subscribers and has not published since <span class="num">19 August 2024</span>. The archive is good: real macro reasoning, a distinct voice, and a natural instinct for teasing rather than dumping. Revive it as The Letter in week one and publish weekly without exception.</p>
+<p>Under a webinar-first funnel the Letter is not the front door — it is the <strong>tail</strong>, and the tail is where most of the revenue is. Every registrant who no-shows, watches without buying, or books and does not close lands on it, and gets re-invited to a later session. A webinar converts a small fraction of a room on the day; the list converts the rest over the following months. Treat registrations as list-building that happens to also sell, and the media budget starts making sense at a much lower same-day conversion rate.</p>
+    <h4>The content nobody else can make</h4>
+    <p>The Telegram archive is a five-and-a-half-year, time-stamped, publicly verifiable record — and it is sitting unused as marketing material. Every past position is a finished content unit:</p>
+    <ul>
+      <li><strong>The retrospective series.</strong> "In March 2022 I posted this. Here is the message, here is the timestamp, here is what happened, and here is what I got wrong." Screen-record the actual channel. It cannot be faked and no competitor can answer it.</li>
+      <li><strong>The losing trades, deliberately.</strong> A monthly post on a position that went against him, with the original reasoning intact. This is the highest-trust content available to this business and the cheapest to produce.</li>
+      <li><strong>Live position teardowns.</strong> One current holding, the full thesis, the sizing logic, the exit conditions — given away free. This is the Chaikin mechanic executed honestly.</li>
+    </ul>
+    <p>Cadence: one long-form video and one Letter per week, cut into three to five short clips each for Reels, Shorts and X. That is a realistic solo load and it feeds every paid channel with proven creative.</p>
+    <h4>Seed other people's audiences before buying strangers'</h4>
+    <p>The most capital-efficient growth lever found anywhere in this sweep was not advertising. Blossom Social attributes roughly a third of its user growth to a managed roster of finance creators, and Qualtrim was built almost entirely on its founder sponsoring his own videos plus riding an existing creator-sponsorship network. For an operator starting from 1,148 followers, paying or partnering with mid-sized finance creators to put Louis in front of an audience that already trusts someone is cheaper per qualified lead than cold Meta traffic, and it compounds into the owned list. Budget for it from month two.</p>
+    <div class="alarm">
+      <span class="lbl">A risk this plan creates</span>
+      <p>Running a large free content engine alongside a paid portfolio invites one specific attack, and it is the one that has actually damaged operators in this category: <strong>a critic lines up the free commentary against the paid positions and publishes the contradictions.</strong> The most-criticised competitor in this sweep was taken apart precisely this way — recommending a sector on the paid side that its free videos were calling bearish the same week.</p>
+      <p>The operating rule that prevents it: the free content and the paid book must always be reconcilable by a motivated stranger. If Louis is bearish on the Letter, the portfolio should show it, or the Letter should explain why it does not. And the Telegram archive must never be pruned — a track record that is quietly trimmed when it goes bad is worth less than no track record at all, and it would destroy the single asset this entire plan is built on.</p>
+    </div>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-creative" aria-labelledby="tab-creative" hidden>
+<section>
+  <div class="rail"><span class="n">10</span>Creative</div>
+  <div class="body">
+    <h2>Six angles, and the rules they all obey</h2>
+    <p>Section 13 schedules six angles across three formats for weeks 4 to 8. These are those six. Each one is built from something Research Center can actually prove, and each is checked against the platform and regulatory constraints in section 11 before it is written, not after it is rejected.</p>
+    <p><strong>Every ad here sells one thing: a seat at the free webinar.</strong> Not the membership, not a call, not the Letter. The ad's only job is a registration.</p>
+
+    <div class="alarm">
+      <span class="lbl">The four rules, non-negotiable</span>
+      <p><strong>1. Never state or imply the reader's outcome.</strong> Louis showing his own trades is the product and is legitimate. Copy that lets a reader infer his results will be theirs is the precise act prosecuted in <em>FTC v. Warrior Trading</em>. Describe the access, never the outcome.</p>
+      <p><strong>2. Telegram never appears.</strong> Meta prohibits investment ads suggesting interaction via direct messaging, and Telegram is the delivery mechanism. The archive can be shown on screen as evidence without ever being named as the channel you join.</p>
+      <p><strong>3. Every performance figure carries its date, its source and its caveat.</strong> The ~30%/yr is self-calculated and unaudited. That sentence travels with the number, always, at readable size.</p>
+      <p><strong>4. No manufactured urgency.</strong> The quarterly enrollment window is real and may be used. Nothing invented may.</p>
+    </div>
+
+    <h3>Why these six and not the category's usual six</h3>
+    <p>The live ads split into two registers. The one to avoid is the Agora-lineage curiosity gap, captured running this week: Brownstone's <q>claim a stake in this digital tollbooth for as little as $2</q>, Behind the Markets' <q>the next energy giant is hiding in plain sight</q>, Chaikin's <q>the unseen winner of the AI race is not SpaceX</q>. Each conceals a stock name behind an implied outcome and a deadline. It works, and it is exactly the shape that has drawn the SEC, the FTC and two state AGs onto Agora. Louis has no brand to disown if it goes wrong.</p>
+    <p>The register to build in is the one the two most durable advertisers in the study are actually running: the Fool's <q>Judge Us by the Scorecard</q>, and the plain, claim-free free-email opt-in that has run for 399 days. Research Center's asset, a five-and-a-half-year timestamped public record that includes the losses, is built for the second register and cannot compete in the first.</p>
+
+    <h3>The six</h3>
+
+    <div class="swipe">
+      <span class="src">ANGLE 1 &middot; THE TIMESTAMP</span>
+      <q>Every position I have taken since March 2021 was posted in public before anyone knew how it would turn out. The entry. The size. The reasoning. Then whatever actually happened, good or bad, on the same public record.<br><br>Most people selling research show you the wins after the fact. That is not proof of anything. Proof is a timestamp you could have checked at the time.</q>
+      <span class="why"><b>The claim only Louis can make.</b> Competitors anchor on AUM, pedigree or signal volume because most have no falsifiable public record. A buyer with $500k discounts unverifiable results automatically. A record that could have been checked at the time survives that discount. <b>Best format:</b> screen recording of the archive scrolling with dates visible. Costs nothing and cannot be faked.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">ANGLE 2 &middot; THE LOSING TRADE</span>
+      <q>Here is a trade I got wrong.<br><br>I posted the entry publicly, I posted the reasoning, and the reasoning did not hold. It is still on the record, with the date on it, because taking it down would make everything else on that record worthless.<br><br>If you are looking for someone who only wins, I am not it and I would not believe anyone who claimed to be.</q>
+      <span class="why"><b>The strongest angle available, and the one no competitor will run.</b> It does three jobs at once: it proves the archive is unedited, which retroactively validates every winner in it; it repels the jackpot buyer, who is the wrong buyer and the expensive one; and it is the best available protection against the Warrior Trading exposure, because nobody who watches Louis walk through a loss can claim he led them to expect a guaranteed outcome. <b>Requires Louis on camera.</b></span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">ANGLE 3 &middot; THE POSITION SIZE</span>
+      <q>A stock tip tells you nothing.<br><br>Two people can buy the same company on the same day and one of them is fine and one of them is in trouble, and the only difference is how much of the portfolio went in.<br><br>Nobody in this business publishes that number. I publish mine, on every position, at the time I take it.</q>
+      <span class="why"><b>The gap in the entire category.</b> Everyone sells what to buy; almost nobody discloses how much of their own money went in. It speaks over the beginner's head straight to the qualified buyer, which is the filtering the ad has to do anyway. Someone who cares about sizing already has a portfolio, which is the quiz's disqualifier applied earlier and for free. <b>Guardrail:</b> keep it descriptive of what Louis does, never prescriptive about the reader, which is the line the publisher's exclusion turns on.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">ANGLE 4 &middot; THE MODEST NUMBER</span>
+      <q>I am not going to tell you I made 1,000% on anything.<br><br>The portfolio has compounded at roughly 30% a year since March 2021. I calculated that myself from the public record and it has not been independently audited, so treat it as my own figure rather than a verified one.<br><br>I would rather tell you that than round it up.</q>
+      <span class="why"><b>The number's believability is the asset.</b> Against a feed of triple-digit claims, a high-twenties compounding figure with its own disclaimer attached reads as the only honest thing on the page. The caveat is the creative, so it must be said aloud rather than buried in fine print. <b>Highest regulatory load of the six.</b> This is the one counsel should read first, and it should not run until they have.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">ANGLE 5 &middot; WHAT I DO NOT DO</span>
+      <q>This is probably not for you.<br><br>I do not trade options. I do not day trade. I do not send alerts telling you to buy something in the next ten minutes. If you are looking to turn a small account into a large one quickly, nothing I do will help you and you will be annoyed by how slow it is.<br><br>What I do is run one concentrated portfolio, post every position publicly with the reasoning, and hold things for a long time.</q>
+      <span class="why"><b>Disqualification as the hook.</b> The quiz already rejects the wrong buyer; doing it in the ad is free, whereas doing it after the click is not. Simpler Trading is running this register live. Naming who it is not for raises intent among everyone who stays, and keeps the wrong applicant off the calendar. <b>Guardrail:</b> stays self-descriptive. The moment it becomes "unlike the gurus who lie to you" it is a comparative claim about identifiable competitors, which is a different and worse risk.</span>
+    </div>
+
+    <div class="swipe">
+      <span class="src">ANGLE 6 &middot; THE METHOD, NOT THE PREDICTION</span>
+      <q>I am not going to tell you what to buy this week.<br><br>What I will do is show you the three rules I use to decide whether anything is worth owning, and what each of those rules has cost me when I ignored it.<br><br>Then I will open the public record and walk two positions from the original post through to the exit. One of them worked. One of them did not.<br><br>About seventy minutes, free, and there is a live Q&amp;A at the end.</q>
+      <span class="why"><b>The angle that matches the room.</b> Section 08 specifies a method webinar and rules out a prediction webinar, so the ad has to promise what the room delivers. A registrant expecting a hot pick who gets a decision framework is a no-show next week and a refund the week after. This angle protects the funnel's weakest number, which is the show rate.</span>
+    </div>
+
+    <h3>How to test them</h3>
+    <p><strong>Do not launch six angles at once.</strong> At the week 4 to 8 budget, six angles across three formats splits the spend eighteen ways and nothing gathers enough registrations to read.</p>
+    <ul>
+      <li><strong>Wave 1: angles 1, 2 and 6.</strong> The archive, the loss and the method. They match the webinar most directly and carry the lowest compliance load. One format each, the cheapest to produce, which is the screen recording.</li>
+      <li><strong>Wave 2:</strong> the two best formats of whatever survived, plus angle 5, which is cheap to make and filters hard.</li>
+      <li><strong>Wave 3:</strong> angle 4 once counsel has cleared the number, and angle 3 once there is evidence the audience is qualified rather than beginners.</li>
+    </ul>
+    <p>Read cost per registration first, then <strong>show rate by angle</strong>, which is where the real difference will appear. An angle can win on cost per registration and lose badly on attendance, and attendance is what this funnel runs on.</p>
+    <div class="alarm">
+      <span class="lbl">None of this is measurable yet</span>
+      <p>Every number above is unreadable until the pixel and Conversions API are installed. The tracking implementation is specified in full in the blocker section and is not yet assigned to anyone. <strong>Until it is done, no angle can be judged and no spend should start.</strong></p>
+    </div>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-compliance" aria-labelledby="tab-compliance" hidden>
+<section>
+  <div class="rail"><span class="n">11</span>Compliance</div>
+  <div class="body">
+    <h2>What may and may not be said</h2>
+    <p><span class="chip v">Primary sources · fetched 2026-09-09</span></p>
+    <div class="alarm">
+      <span class="lbl">Highest-probability cause of rejection</span>
+      <p>Meta's Financial and Insurance Products and Services policy explicitly prohibits ads that <q>promote investment products or opportunities that suggest user interaction with the advertiser via on-platform or off-platform <strong>direct messaging services</strong></q>.</p>
+      <p>Research Center's entire delivery mechanism is a <strong>Telegram channel</strong>, and its own terms instruct members to message Louis on Telegram to cancel. Ads must never present Telegram, DMs or "message me" as the mechanism. Sell the research, the letter and the portfolio; the delivery channel stays off the ad and off the landing page above the fold.</p>
+    </div>
+    <div class="alarm">
+      <span class="lbl">Prosecuted precedent against a near-identical business</span>
+      <p>In April 2022 the FTC sued <strong>Warrior Trading</strong> and its founder Ross Cameron for marketing that showcased <em>the founder's own trading results</em> in a way that implied customers would achieve similar outcomes, when most customers lost money. It settled for <span class="num">$3M</span>, and in January 2023 the FTC refunded <span class="num">$2.9M</span> to 20,402 consumers.</p>
+      <p>That is the same buyer, the same category, and structurally the same claim Research Center's product is built on. <strong>Louis showing his own trades is the product and is entirely legitimate. What is not legitimate is any copy that lets a reader infer his results are what they will get.</strong> The line runs through the marketing, not the research: describe the access, never the outcome. Every performance figure needs a date, a source, and a plain statement that member results will differ.</p>
+      <p>FTC Endorsement Guides (16 CFR Part 255) apply to the testimonial videos already on the page: any testimonial implying a financial result needs substantiation and a clear not-typical disclosure, and any incentive given for it must be disclosed.</p>
+    </div>
+    <p>The same policy warns that advertisers <q>may be required to be licensed in the country they are targeting</q> and that Meta may review licensing. Meta's Unacceptable Business Practices policy separately bans <q>deceptive or exaggerated claims about the success of a product or service</q> and names investment opportunities as a category where it commonly sees violations and may demand additional verification.</p>
+    <p>Google's financial products policy requires the destination page to carry the business's <strong>physical address</strong>, <strong>all associated fees</strong>, and links to any third-party accreditation claimed. The Wyoming address is already in the footer; <strong>fees are not disclosed</strong> anywhere on the landing page, only as budget bands inside the quiz. That must be fixed before any Google spend. Google gives a 7-day warning before suspension.</p>
+    <p>Google also gates the account itself: US financial advertisers must clear the <strong>Advertiser Verification Program</strong> — identity verification, business-operations verification, then any policy-specific certification — and those requirements were expanded again in June 2026. This is days to weeks of lead time, not a same-day switch. Start it in week one alongside the Meta business verification, or it becomes the thing that holds up launch.</p>
+    <div class="vs">
+      <div class="bad">
+        <h5>Will get the account banned</h5>
+        <ul>
+          <li>Any guaranteed, promised or "risk-free" return</li>
+          <li>Income claims implying typical member results</li>
+          <li>"Join my Telegram" as the ad's call to action</li>
+          <li>Screenshots of account balances as the primary proof</li>
+          <li>Urgency invented for the ad ("3 spots left today")</li>
+          <li>Any crypto framing — that needs written permission plus a licence</li>
+        </ul>
+      </div>
+      <div class="good">
+        <h5>Defensible, and already true</h5>
+        <ul>
+          <li>"Every position time-stamped in public since March 2021"</li>
+          <li>The ~30%/yr figure stated with its own disclaimer attached</li>
+          <li>"Not investment advice. Not a broker-dealer or adviser."</li>
+          <li>Testimonials with a clear not-typical disclosure</li>
+          <li>Free educational research as the offer in the ad</li>
+          <li>The full risk disclosure already on the site</li>
+        </ul>
+      </div>
+    </div>
+    <h3>On the publisher's exclusion</h3>
+    <p>The terms rely on the publisher's exclusion under §202(a)(11)(D) of the Investment Advisers Act, which covers <em>general, impersonal</em> commentary distributed to all subscribers alike. The commercial risk is that the sales call and the private community are exactly where that line gets crossed. A closer who tells an applicant what <em>they</em> should buy given <em>their</em> portfolio has just given personalised advice. <strong>The call script needs a hard rule against individualised recommendations, and it needs it before the first call.</strong> This is a lawyer question, not a marketing question, and it should go to one.</p>
+  </div>
+</section>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-numbers" aria-labelledby="tab-numbers" hidden>
+<section>
+  <div class="rail"><span class="n">12</span>Model</div>
+  <div class="body wide">
+    <h2>The numbers to $100k/month</h2>
+    <div class="body" style="max-width:var(--col)">
+      <p>Base case assumes a <span class="num">$14</span> cost per webinar registration and the conversion chain in section 08 — one member per 95 registrations, at <span class="num">$1,330</span> acquisition cost against a $4,380 blended ACV.</p>
+    </div>
+    <div class="figs">
+      <div class="fig"><span class="k">Members needed</span><span class="v">274</span><span class="s">At $4,380 blended ACV</span></div>
+      <div class="fig"><span class="k">Registrations / member</span><span class="v">95</span><span class="s">1.05% end to end</span></div>
+      <div class="fig"><span class="k">CAC, base case</span><span class="v">$1,330</span><span class="s">3.3× first-year ACV</span></div>
+      <div class="fig"><span class="k">Steady-state spend</span><span class="v">$53k</span><span class="s">Per month, for 40 members</span></div>
+    </div>
+    <div class="tw">
+      <table>
+        <caption>Illustrative ramp. Members are cumulative and net of assumed churn; the run rate is cumulative members × $4,380 ÷ 12. Assumptions, not forecasts — replace with live data from month three.</caption>
+        <thead><tr><th>Month</th><th class="num">Media spend</th><th class="num">New members</th><th class="num">Cumulative</th><th class="num">Run rate / mo</th><th>Focus</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="num">$5,000</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td>Pixels, CAPI, webinar built</td></tr>
+          <tr><td>2</td><td class="num">$5,000</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td>First live webinars, iterate deck</td></tr>
+          <tr><td>3</td><td class="num">$6,650</td><td class="num">5</td><td class="num">5</td><td class="num">$1,825</td><td>First calls, objection library</td></tr>
+          <tr><td>4</td><td class="num">$13,300</td><td class="num">10</td><td class="num">15</td><td class="num">$5,475</td><td>Scale winning ad angles</td></tr>
+          <tr><td>5</td><td class="num">$19,950</td><td class="num">15</td><td class="num">30</td><td class="num">$10,950</td><td>YouTube ads; evergreen test</td></tr>
+          <tr><td>6</td><td class="num">$29,260</td><td class="num">22</td><td class="num">52</td><td class="num">$18,980</td><td>Newsletter sponsorships</td></tr>
+          <tr><td>7</td><td class="num">$37,240</td><td class="num">28</td><td class="num">80</td><td class="num">$29,200</td><td>Second closer onboarded</td></tr>
+          <tr><td>8</td><td class="num">$45,220</td><td class="num">34</td><td class="num">114</td><td class="num">$41,610</td><td>Partner tier push</td></tr>
+          <tr><td>9</td><td class="num">$50,540</td><td class="num">38</td><td class="num">152</td><td class="num">$55,480</td><td>First member event</td></tr>
+          <tr><td>10</td><td class="num">$55,860</td><td class="num">42</td><td class="num">194</td><td class="num">$70,810</td><td>Retention systems</td></tr>
+          <tr><td>11</td><td class="num">$59,850</td><td class="num">45</td><td class="num">239</td><td class="num">$87,235</td><td>Enrollment window</td></tr>
+          <tr class="hi"><td>12</td><td class="num">$63,840</td><td class="num">48</td><td class="num">275</td><td class="num">$100,375</td><td>Target reached</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="body" style="max-width:var(--col)">
+      <p>Year-one media totals roughly <span class="num">$392,000</span> against roughly <span class="num">$1.26M</span> collected — a blended <strong>3.2× return on ad spend</strong>, with acquisition at <strong>31% of collections</strong> against MarketWise's 40% of revenue / 48% of billings. The plan is conservative by category standards on either denominator.</p>
+      <h3>Sensitivity</h3>
+      <div class="tw">
+        <table>
+          <thead><tr><th>Scenario</th><th class="num">Cost / reg</th><th class="num">CAC</th><th class="num">First-year ROAS</th><th>Read</th></tr></thead>
+          <tbody>
+            <tr><td>Bull</td><td class="num">$10</td><td class="num">$950</td><td class="num">4.6×</td><td>Strong webinar, high show rate</td></tr>
+            <tr class="hi"><td>Base</td><td class="num">$14</td><td class="num">$1,330</td><td class="num">3.3×</td><td>Plan this</td></tr>
+            <tr><td>Bear</td><td class="num">$20</td><td class="num">$1,900</td><td class="num">2.3×</td><td>Still viable; fix show rate before spending more</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Even the bear case clears profitably on first-year cash alone, before any renewal. Renewals are where this business actually compounds — MarketWise draws more than half its billings from subscribers of four years or more.</p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="rail"><span class="n">13</span>First 90 days</div>
+  <div class="body">
+    <h2>Execution order</h2>
+    <h4>Weeks 1–2 · Instrument everything</h4>
+    <ul>
+      <li>Meta pixel plus Conversions API through GoHighLevel, with deduplication and the five named events</li>
+      <li>GA4, and a source field on the booking form</li>
+      <li>Meta Business Manager and ad account created and verified for the Wyoming entity — begin now, verification in this category is slow</li>
+      <li>Publish fees on the landing page, ahead of any Google spend</li>
+    </ul>
+    <h4>Weeks 2–4 · Build the webinar</h4>
+    <ul>
+      <li>Write and build the 70-minute session: method, three rules, archive proof pass including one losing position, offer, Q&amp;A</li>
+      <li>Registration page and the full reminder sequence in GoHighLevel (4 emails, 2 SMS)</li>
+      <li>Commas webinar room configured with in-room checkout for Core and in-room booking for Partner</li>
+      <li>Relaunch the Letter; import the 193 subscribers with a re-permission email</li>
+      <li>Add the 30-day guarantee and turn on payment plans</li>
+    </ul>
+    <h4>Weeks 4–8 · First spend, live only</h4>
+    <ul>
+      <li>$5k/month to webinar registrations. Six angles, three formats each</li>
+      <li>Run the webinar live weekly with Louis hosting. Do not record for evergreen yet</li>
+      <li>Watch two numbers above all others: <strong>show rate</strong> and <strong>attendee-to-booking rate</strong>. Everything else is downstream of them</li>
+      <li>Louis takes every call personally; record them all, build the objection library from real Q&amp;A</li>
+    </ul>
+    <h4>Weeks 8–12 · Scale what worked</h4>
+    <ul>
+      <li>Kill any angle above a $20 cost per registration, double budget on the top two</li>
+      <li>Once the live session converts, record it and test just-in-time evergreen against a live control</li>
+      <li>First YouTube campaign driving registrations</li>
+      <li>Replace every assumed rate in section 08 with a measured one and re-forecast</li>
+    </ul>
+  </div>
+</section>
+<section>
+  <div class="rail"><span class="n">14</span>Open</div>
+  <div class="body">
+    <h2>Decisions and unknowns</h2>
+    <p><span class="chip o">Not inferred — needs an answer from the operator</span></p>
+    <p>Nothing in the public record establishes these, and each one materially changes the plan. They are listed in the order they block work.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Question</th><th>Why it matters</th></tr></thead>
+        <tbody>
+          <tr><td>Current member count and MRR</td><td>The month-12 target is a ramp from an unknown base. If there are already 50 members, the plan shortens by roughly four months.</td></tr>
+          <tr><td>Actual prices charged today</td><td>The quiz reveals budget bands, not prices. The whole model keys off blended ACV.</td></tr>
+          <tr><td>Does a Meta ad account exist for the entity</td><td>Verification in the financial category is slow; if this has not started, it is the critical path.</td></tr>
+          <tr><td>Will Louis appear on camera weekly</td><td>The entire organic engine and most of the paid creative assumes he will. If not, the plan needs restructuring around written and chart-based content.</td></tr>
+          <tr><td>Can the ~30% figure be reconstructed from the archive</td><td>It is the central claim. Someone independent should be able to walk the Telegram history and land near it.</td></tr>
+          <tr><td>Legal review of the call script</td><td>The publisher's exclusion is the regulatory foundation of the business and the sales call is where it is most exposed.</td></tr>
+          <tr><td>Budget authority and monthly ceiling</td><td>Spend, pricing and go-live are operator decisions. Nothing in this plan should be actioned as spend without an explicit sign-off.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+  </div>
+<footer>
+  RESEARCH CENTER · GROWTH PLAN · PREPARED 2026-09-09 BY THE COMPETITIVE INTEL DESK<br>
+  All competitor pricing, ad copy and platform policy read from public sources on the date shown. Competitor ad copy is recorded for angle and structure only and must not be reproduced.<br>
+  Revised 2026-09-09 after a second, structured pass over the Meta Ad Library: 1,912 ad records scanned, 242 confirmed to the named advertiser, with exact run-durations and destinations. That pass corrected the free-front-end finding in section 05 and added sections 05 (sweep #2) and 10 (creative). The draft ad copy in section 10 is unreviewed by counsel and must not run until it is.<br>
+  Prices for Hedgeye, Capitalist Exploits, Macro Ops, KEDM and Research Center, the Meta ad captures, the pixel audit and the platform policy quotations were verified first-hand against the primary source. The Motley Fool and Stansberry top-tier figures, the MarketWise filing data and the FTC and SEC case references were gathered in a parallel research pass and spot-checked, not independently re-verified line by line; the Fool One price is marked approximate for that reason.<br>
+  Conversion rates, costs per lead and the ramp table are planning assumptions, not forecasts. Nothing here is investment advice.
+</footer>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(id,focus){
+    tabs.forEach(function(t){
+      var on=t.dataset.target===id;
+      t.setAttribute('aria-selected',on?'true':'false');
+      t.tabIndex=on?0:-1;
+      var p=document.getElementById('panel-'+t.dataset.target);
+      if(p) p.hidden=!on;
+      if(on&&focus) t.focus();
+    });
+    try{ if(history.replaceState) history.replaceState(null,'','#'+id); }catch(e){}
+    window.scrollTo({top:0,behavior:'instant'});
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(t.dataset.target,false);});
+    t.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(!d) return;
+      e.preventDefault();
+      show(tabs[(i+d+tabs.length)%tabs.length].dataset.target,true);
+    });
+  });
+  function fromHash(){
+    var h=(location.hash||'').replace('#','');
+    if(h&&document.getElementById('panel-'+h)) show(h,false);
+  }
+  window.addEventListener('hashchange',fromHash);
+  fromHash();
+})();
+</script>
+
+</body>
+</html>
